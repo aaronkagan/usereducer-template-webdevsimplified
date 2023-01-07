@@ -1,5 +1,7 @@
 # useReducer Template
 
+IN PROGRESS
+
 This project is used by myself a learning tool and reference for the useReducer hook in React
 
 Based on the video by Web Dev Simplified
