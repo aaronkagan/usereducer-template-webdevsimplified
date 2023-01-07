@@ -13,7 +13,8 @@ const Todos = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [name, setName] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     dispatch({ type: ACTIONS.ADD_TODO });
     setName('');
   };
