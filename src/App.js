@@ -1,4 +1,4 @@
-import { useState, useReducer } from 'react';
+import { useReducer } from 'react';
 import styled from 'styled-components';
 const App = () => {
   // The reducer function that will be used to set the state using useReducer
