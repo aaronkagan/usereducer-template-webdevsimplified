@@ -1,17 +1,23 @@
 import { useReducer } from 'react';
 import styled from 'styled-components';
 const App = () => {
+  // Constant variable to hold the actions. The benefit of this is that we will have autocomplete and we don't have to worry about misspelling a string. If we misspell one of the object properties we'll get a warning
+  const ACTIONS = {
+    INCREMENT: 'increment',
+    DECREMENT: 'decrement'
+  };
+
   // The reducer function that will be used to set the state using useReducer
   // The first argument is the current state (where our state is currently at)
   // The second argument is the action that will be passed into the dispatch function. Whatever we call the dispatch with will be sent to the action parameter and the reducer is going to return the updated state based on the action received from the dispatch.
   const reducer = (state, action) => {
     switch (action.type) {
-      case 'INCREMENT':
+      case ACTIONS.INCREMENT:
         // return { count: state.count + 1 };
         // Return the whole state object AND modify the property you want to modify
         return { ...state, count: state.count + 1 };
 
-      case 'DECREMENT':
+      case ACTIONS.DECREMENT:
         // Return the whole state object AND modify the property you want to modify
         return { ...state, count: state.count - 1 };
       default:
@@ -32,12 +38,12 @@ const App = () => {
 
   const decrementCount = () => {
     // This calls the dispatch (which in turn calls the reducer function)
-    dispatch({ type: 'DECREMENT' });
+    dispatch({ type: ACTIONS.INCREMENT });
   };
 
   const incrementCount = () => {
     // This calls the dispatch (which in turn calls the reducer function)
-    dispatch({ type: 'INCREMENT' });
+    dispatch({ type: ACTIONS.DECREMENT });
   };
 
   return (
