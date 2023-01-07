@@ -63,3 +63,7 @@ Q: What is the action argument that the reducer function receives
 A: The second argument is the action that will be passed into the dispatch function. Whatever we call the dispatch with will be sent to the action parameter and the reducer is going to return the updated state based on the action received from the dispatch
 
 ---
+
+Q: What is the benefit of setting up the ACTIONS object with the actions as properties?
+
+A: The benefit of this is that we will have autocomplete and we don't have to worry about misspelling a string. If we misspell one of the object properties we'll get a warning
